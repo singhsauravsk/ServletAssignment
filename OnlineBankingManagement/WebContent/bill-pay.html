@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>
+			Bill Pay
+		</title>
+		<style type="text/css">
+            .show { display: block;  }
+            .hide { display: none; }
+        </style>
+		<script type="text/javascript">
+            function showSelectElectric() {
+                var selectPhone = document.getElementById('phoneNetworks');
+				var selectElectric = document.getElementById('electricBoards');
+                selectElectric.className = 'show';
+                selectPhone.className = 'hide';
+            }
+			
+            function showSelectPhone() {
+                var selectPhone = document.getElementById('phoneNetworks');
+				var selectElectric = document.getElementById('electricBoards');
+                selectElectric.className = 'hide';
+                selectPhone.className = 'show';
+            }
+        </script>
+	</head>
+	<body>
+		<form action="bill-pay.do" method="post">
+            Electric Bill <input type="radio" name="billType" value="electricbillPay" onclick="showSelectElectric();" />
+			Phone Bill <input type="radio" name="billType" value="phoneBillPay" onclick="showSelectPhone();" />
+			
+            <select id="electricBoards" name = "electricityBoard" class="hide">
+                <option value="MSEB">MSEB</option>
+                <option value="Tata">Tata</option>
+                <option value="Reliance">Reliance</option>
+                <option value="Select" selected>Select</option>
+            </select>
+			<select id="phoneNetworks" name = "phoneNetwork" class="hide">
+                <option value="MTNL">MTNL</option>
+                <option value="Jio">Jio</option>
+                <option value="Airtel">Airtel</option>
+				<option value="Idea">Idea</option>
+				<option value="Reliance">Reliance</option>
+                <option value="Select" selected>Select</option>
+            </select>
+            </br>
+            Amount : <input type = "number" name = "amount">
+            </br>
+            <input type = "submit" value = "Pay">
+        </form>
+	</body>
+</html>

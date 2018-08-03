@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>New Account</title>
+	</head>
+	<body>
+		<h1>Virtual Bank</h1>
+		<h3>Create New account</h3>
+		
+		<form action = "new-account.do" method="post"> 
+			<input type = "radio" name = "title" value = "Mr."> Mr.
+			<input type = "radio" name = "title" value = "Mrs."> Mrs.
+			<input type = "radio" name = "title" value = "Ms."> Ms.
+			<input type = "radio" name = "title" value = "Dr."> Dr.
+			<br/>
+			Last Name : <input type = "text" name = "lastName"/>
+			First Name : <input type = "text" name = "firstName"/> 
+			<br/>
+			Date of Birth : <input type = "date" name = "dob"/> 
+			<br/>
+			<input type = "submit" value = "Submit">
+		</form>
+	</body>
+</html>
